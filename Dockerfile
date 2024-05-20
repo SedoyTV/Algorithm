@@ -23,6 +23,8 @@ COPY . /var/www/html
 # Установка зависимостей PHP
 RUN composer install
 
+RUN php artisan key:generate
+
 RUN chown -R www-data:www-data /var/www/html/storage
 
 # Установка прав на директорию storage
