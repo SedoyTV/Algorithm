@@ -6,39 +6,25 @@ use Illuminate\Http\Request;
 
 class DeclensionController extends Controller
 {
-    public function getWordDeclension($number, $word, $word1, $word2)
+    private function getStudentWord($number)
     {
         $lastDigit = $number % 10;
         $lastTwoDigits = $number % 100;
 
-        if ($lastTwoDigits >= 11 && $lastTwoDigits <= 19) {
-            return "$number $word2";
-        }
-
-        switch ($lastDigit) {
-            case 1:
-                return "$number $word";
-            case 2:
-            case 3:
-            case 4:
-                return "$number $word1";
-            default:
-                return "$number $word2";
+        if ($lastDigit == 1 && $lastTwoDigits != 11) {
+            return 'студент';
+        } elseif (in_array($lastDigit, [2, 3, 4]) && !in_array($lastTwoDigits, [12, 13, 14])) {
+            return 'студента';
+        } else {
+            return 'студентов';
         }
     }
 
     public function handleRequest(Request $request)
     {
-        $number = $request->query('number');
-        $word = $request->query('word');
-        $word1 = $request->query('word1');
-        $word2 = $request->query('word2');
-
-        if (is_numeric($number) && !empty($word) && !empty($word1) && !empty($word2)) {
-            $number = intval($number);
-            $declension = $this->getWordDeclension($number, $word, $word1, $word2);
-
-            return response()->json(['Результат склонения' => $declension], 200, [], JSON_UNESCAPED_UNICODE);
-        } 
+        $number = $request->input('number', null);
+        $number = intval($number);
+        $studentWord = $this->getStudentWord($number);
+        return response()->json(['На учебе' => "$number $studentWord"], 200, [], JSON_UNESCAPED_UNICODE);
     }
 }
