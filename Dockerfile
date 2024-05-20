@@ -20,12 +20,9 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 # Копирование кода приложения в контейнер
 COPY . /var/www/html
 
-# Установка зависимостей PHP
-RUN composer install
-
-RUN php artisan key:generate
-
 RUN chown -R www-data:www-data /var/www/html/storage
 
 # Установка прав на директорию storage
 RUN chmod -R 777 /var/www/html/storage
+
+RUN chmod -R 777 /var/www/html/setup.sh

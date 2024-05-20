@@ -25,11 +25,7 @@ class OddSumController extends Controller
 
         if (!empty($array)) {
             $sumOdd = $this->sumOddNumbers($array);
-
-            return response()->json(['sumOdd' => $sumOdd]);
-        } else {
-            return response()->json(['error' => 'Некорректный или пустой массив!']);
-        }
+            return response()->json(['Сумма нечетных чисел' => $sumOdd], 200, [], JSON_UNESCAPED_UNICODE);
+        } 
     }
 }
-

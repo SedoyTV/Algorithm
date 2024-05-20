@@ -38,9 +38,7 @@ class DeclensionController extends Controller
             $number = intval($number);
             $declension = $this->getWordDeclension($number, $word, $word1, $word2);
 
-            return response()->json(['declension' => $declension]);
-        } else {
-            return response()->json(['error' => 'Некорректные параметры запроса!']);
-        }
+            return response()->json(['Результат склонения' => $declension], 200, [], JSON_UNESCAPED_UNICODE);
+        } 
     }
 }

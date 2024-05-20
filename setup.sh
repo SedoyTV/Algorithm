@@ -1,3 +1,5 @@
+#!/bin/bash
+
 cp .env.example .env
 
 docker-compose exec php composer install

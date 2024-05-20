@@ -29,11 +29,7 @@ class MinNumberController extends Controller
 
         if (!empty($array)) {
             $minValue = $this->findMinimum($array);
-
-            return response()->json(['minimum' => $minValue]);
-        } else {
-            return response()->json(['error' => 'Некорректный или пустой массив!']);
-        }
+            return response()->json(['Минимальное число' => $minValue], 200, [], JSON_UNESCAPED_UNICODE);
+        } 
     }
 }
-

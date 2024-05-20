@@ -31,9 +31,7 @@ class SymbolCountController extends Controller
             $characterCounts = $this->countCharacters($inputString);
 
             return response()->json($characterCounts);
-        } else {
-            return response()->json(['error' => 'Пустая строка!']);
-        }
+        } 
     }
 }
 
