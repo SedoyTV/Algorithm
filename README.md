@@ -1,13 +1,41 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://private-user-images.githubusercontent.com/74038190/325895940-dad5d025-91c3-43b9-9a3d-1c9266f77cb7.gif?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MTYzMTkyMTMsIm5iZiI6MTcxNjMxODkxMywicGF0aCI6Ii83NDAzODE5MC8zMjU4OTU5NDAtZGFkNWQwMjUtOTFjMy00M2I5LTlhM2QtMWM5MjY2Zjc3Y2I3LmdpZj9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDA1MjElMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwNTIxVDE5MTUxM1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPThmYzkyMTFhZTMwOWIwZjUxMmEyMmI4NTUwZTg5OWZkNzFlZDQ1MGZlOWVlNDc2NDE1ZmNkYmMwNWEyY2E0ZmEmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.GCFuZEDSiHMAsRpNZXpuGLe8zp9X3GuLgnjEqydFXXE" width="400" alt="Laravel Logo"></a></p>
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
 
 <h1 align="center">Проект по алгоритмам доступен по  <a href="http://localhost:8000" >адресу</h1>
+
+<h2 align="center">Установка и запуск</h2>
+
+1. Запустите командную оболочку Bash
+
+
+2. Клонируйте репозиторий:
+    ```
+   git clone git@github.com:SedoyTV/Algorithm.git
+    ```
+
+3. Перейдите в директорию проекта:
+    ```
+    cd Algorithm
+   ```
+
+4. В командной строке введите
+   ```
+    docker-compose up --build -d
+   ```
+
+5. В командной строке введите
+   ```
+   ./setup.sh
+   ```
+
+6. Дождитесь выполнения скрипта
+
+
+7. Откройте браузер и перейдите по адресу
+   ```
+   http://localhost:8000.
+   ```
+
 
 <h2 align="center">Описание страниц</h2>
 
@@ -99,21 +127,11 @@ localhost:8000/odd-sum?array=1,2,3,4,5,6,7,8,9,10
 
 **Пример запроса:**
 
-***
-На вход подается: 
-
-Число через ключ number
-
-Cлово в именительном падеже в единственном числе через ключ word
-
-Слово в родительном падеже в единственном числе через ключ word1
-
-Слово в родительном падеже в множественном числе через ключ word2
-***
+***На вход подается число через ключ number***
 
 ***command bash***
 ```
-curl -X POST "http://localhost:8000/declension?number=10&word=студент&word1=студента&word2=студентов"
+curl -X POST "http://localhost:8000/declension?number=27" 
 ```
 ***postman  / insomnia***
 ```
@@ -122,38 +140,8 @@ localhost:8000/declension?number=10&word=студент&word1=студента&w
 
 **Пример ответа:**
 {
-	"Результат склонения": "3 студента"
+	"На учебе": "3 студента"
 }
 
-## Установка и запуск
 
-1. Запустите командную оболочку Bash
-
-
-2. Клонируйте репозиторий:
-    ```
-   git clone git@github.com:SedoyTV/Algorithm.git
-    ```
-
-3. Перейдите в директорию проекта:
-    ```
-    cd Algorithm
-   ```
-
-4. В командной строке введите
-   ```
-    docker-compose up --build -d
-   ```
-
-5. В командной строке введите
-   ```
-   ./setup.sh
-   ```
-
-6. Дождитесь выполнения скрипта
-
-
-7. Откройте браузер и перейдите по адресу
-  ```
-   http://localhost:8000.
-  ```
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>  

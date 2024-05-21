@@ -1,7 +1,6 @@
 version: '3'
 
 services:
-  # PHP Service
   php:
     build:
       context: .
@@ -11,7 +10,6 @@ services:
     ports:
       - "9000:9000"
 
-  # Nginx Service
   nginx:
     image: nginx:latest
     ports:
@@ -22,14 +20,8 @@ services:
     depends_on:
       - php
 
-  # MySQL Service
   mysql:
     image: mysql:8.0
-    environment:
-      MYSQL_DATABASE: laravel
-      MYSQL_USER: laravel
-      MYSQL_PASSWORD: yourpassword
-      MYSQL_ROOT_PASSWORD: yourpassword
     volumes:
       - db_data:/var/lib/mysql
     ports:
