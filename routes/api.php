@@ -3,16 +3,15 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| API Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register API routes for your application. These
-| routes are loaded by the RouteServiceProvider and all of them will
-| be assigned to the "api" middleware group. Make something great!
-|
-*/
+use App\Http\Controllers\SymbolCountController;
+use App\Http\Controllers\MinNumberController;
+use App\Http\Controllers\OddSumController;
+use App\Http\Controllers\DeclensionController;
+
+Route::post('/declension', [DeclensionController::class, 'HandleRequest']);
+Route::post('/count-symbol', [SymbolCountController::class, 'HandleRequest']);
+Route::post('/min-number', [MinNumberController::class, 'HandleRequest']);
+Route::post('/odd-sum', [OddSumController::class, 'handleRequest']);
 
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();

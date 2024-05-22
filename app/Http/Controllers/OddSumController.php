@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class OddSumController extends Controller
 {
-    public function sumOdd($array)
+    public function SumOdd($array):int
     {
         $sum = 0;
         foreach ($array as $num) {
@@ -17,7 +17,7 @@ class OddSumController extends Controller
         return $sum;
     }
 
-    public function handleRequest(Request $request)
+    public function HandleRequest(Request $request)
     {
         $arrayString = $request->query('array');
         $array = explode(',', $arrayString);
