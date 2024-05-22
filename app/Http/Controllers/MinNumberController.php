@@ -11,7 +11,6 @@ class MinNumberController extends Controller
         if (empty($array)) {
             return null;
         }
-
         $minValue = $array[0];
         foreach ($array as $num) {
             if ($num < $minValue) {
@@ -26,10 +25,9 @@ class MinNumberController extends Controller
         $arrayString = $request->query('array');
         $array = explode(',', $arrayString);
         $array = array_map('intval', $array);
-
         if (!empty($array)) {
             $minValue = $this->findMinimum($array);
             return response()->json(['Минимальное число' => $minValue], 200, [], JSON_UNESCAPED_UNICODE);
-        } 
+        }
     }
 }

@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class OddSumController extends Controller
 {
-    public function sumOddNumbers($array)
+    public function sumOdd($array)
     {
         $sum = 0;
         foreach ($array as $num) {
@@ -22,10 +22,9 @@ class OddSumController extends Controller
         $arrayString = $request->query('array');
         $array = explode(',', $arrayString);
         $array = array_map('intval', $array);
-
         if (!empty($array)) {
-            $sumOdd = $this->sumOddNumbers($array);
+            $sumOdd = $this->sumOdd($array);
             return response()->json(['Сумма нечетных чисел' => $sumOdd], 200, [], JSON_UNESCAPED_UNICODE);
-        } 
+        }
     }
 }
