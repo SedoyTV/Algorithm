@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class DeclensionController extends Controller
 {
-    private function DeclensionWord($number):string
+    private function declensionWord($number):string
     {
         $lastDigit = $number % 10;
         $lastTwoDigits = $number % 100;
@@ -19,7 +19,7 @@ class DeclensionController extends Controller
         }
     }
 
-    public function HandleRequest(Request $request)
+    public function handleRequest(Request $request)
     {
         $number = $request->input('number', null);
         $number = intval($number);

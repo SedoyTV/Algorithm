@@ -41,7 +41,7 @@
 
 <h2 align="center"> 1. Подсчет различных символов в строке</h2>
 
-**URL:** /count-symbol
+**URL:** api/count-symbol
 
 **Описание:** Реализует алгоритм подсчета различных символов в строке. Принимает строку из HTTP запроса и возвращает массив, где ключ — символ, а значение — количество символов.
 
@@ -51,11 +51,11 @@
 ***command bash***
 
 ```
-curl -X POST "http://localhost:8000/count-symbol?text=hello%20world"
+curl -X POST "http://localhost:8000/api/count-symbol?text=hello%20world"
 ```
 ***postman  / insomnia***
 ```
-localhost:8000/count-symbol?text=hello world
+localhost:8000/api/count-symbol?text=hello world
 ```
 
 **Пример ответа:**
@@ -74,7 +74,7 @@ localhost:8000/count-symbol?text=hello world
 
 <h2 align="center">2. Поиск минимального значения в массиве</h2>
 
-**URL:** /min-number
+**URL:** api/min-number
 
 **Описание:** Реализует алгоритм поиска минимального значения в массиве. Принимает массив чисел из HTTP запроса и возвращает минимальное значение.
 
@@ -83,11 +83,11 @@ localhost:8000/count-symbol?text=hello world
 
 ***command bash***
 ```
-curl -X POST "http://localhost:8000/min-number?array=10,20,30,5,40,50"
+curl -X POST "http://localhost:8000/api/min-number?array=10,20,30,5,40,50"
 ```
 ***postman  / insomnia***
 ```
-localhost:8000/min-number?array=10,20,30,5,40,50
+localhost:8000/api/min-number?array=10,20,30,5,40,50
 ```
 
 **Пример ответа:**
@@ -97,7 +97,7 @@ localhost:8000/min-number?array=10,20,30,5,40,50
 
 <h2 align="center">3. Подсчет суммы нечетных элементов массива</h2>
 
-**URL:** /odd-sum
+**URL:** api/odd-sum
 
 **Описание:** Реализует алгоритм подсчета суммы нечетных элементов массива. Принимает массив чисел из HTTP запроса и возвращает сумму нечетных элементов.
 
@@ -106,11 +106,11 @@ localhost:8000/min-number?array=10,20,30,5,40,50
 
 ***command bash***
 ```
-curl -X POST "http://localhost:8000/odd-sum?array=1,2,3,4,5,6,7,8,9,10"
+curl -X POST "http://localhost:8000/api/odd-sum?array=1,2,3,4,5,6,7,8,9,10"
 ```
 ***postman  / insomnia***
 ```
-localhost:8000/odd-sum?array=1,2,3,4,5,6,7,8,9,10
+localhost:8000/api/odd-sum?array=1,2,3,4,5,6,7,8,9,10
 ```
 
 **Пример ответа:**
@@ -120,7 +120,7 @@ localhost:8000/odd-sum?array=1,2,3,4,5,6,7,8,9,10
 
 <h2 align="center">4. Склонение окончания слова в зависимости от числа</h2>
 
-**URL:** /declension
+**URL:** api/declension
 
 **Описание:** Реализует алгоритм для склонения окончания слова в зависимости от числа. Принимает целое число из HTTP запроса и возвращает соответствующее слово с правильным окончанием.
 
@@ -131,11 +131,11 @@ localhost:8000/odd-sum?array=1,2,3,4,5,6,7,8,9,10
 
 ***command bash***
 ```
-curl -X POST "http://localhost:8000/declension?number=27" 
+curl -X POST "http://localhost:8000/api/declension?number=27" 
 ```
 ***postman  / insomnia***
 ```
-localhost:8000/declension?number=10&word=студент&word1=студента&word2=студентов
+localhost:8000/api/declension?number=10&word=студент&word1=студента&word2=студентов
 ```
 
 **Пример ответа:**

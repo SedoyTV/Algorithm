@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class SymbolCountController extends Controller
 {
-    public function CountSymbol($inputString):array
+    public function countSymbol($inputString):array
     {
         $charCount = [];
         $characters = mb_convert_encoding($inputString, 'UTF-8', 'UTF-8');
@@ -20,7 +20,7 @@ class SymbolCountController extends Controller
         return $charCount;
     }
 
-    public function HandleRequest(Request $request)
+    public function handleRequest(Request $request)
     {
         $inputString = $request->input('text');
         if (!empty($inputString)) {

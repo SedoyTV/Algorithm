@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class MinNumberController extends Controller
 {
-    public function FindMinimum($array):int|float|null
+    public function findMinimum($array):int|float|null
     {
         if (empty($array)) {
             return null;
@@ -20,7 +20,7 @@ class MinNumberController extends Controller
         return $minValue;
     }
 
-    public function HandleRequest(Request $request)
+    public function handleRequest(Request $request)
     {
         $arrayString = $request->query('array');
         $array = explode(',', $arrayString);
